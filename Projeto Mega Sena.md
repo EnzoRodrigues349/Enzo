@@ -1,19 +1,4 @@
 [sena.py](https://github.com/user-attachments/files/24360929/sena.py)
-from random import randint
-
-sena=(randint(0,60), randint(0,60),randint(0,60), randint(0,60),randint(0,60), randint(0,60))
-num=()
-for c in range(6):
-    n=int(input(f'informe o {c+1}º numero:'))
-    num=num+(n,)
-acertos= set(sena)& set(num)
-print(f'Você acertou {len(acertos)} número(s),{sorted(acertos)}')
-print(f'Seus números: {num}')
-print(f'Números sorteados: {sena}')
-if len (acertos) ==6:
-    print('Você ganhou')
-else:
-    print('Você perdeu')
-
-# &=Ele retorna os valores que existem nos dois conjuntos ao mesmo tempo.
-# SET= Remover valores repetidos
+🎰 Mega_Sena.
+Simulação da Mega Sena:
+🎲 Gera apostas aleatórias, realiza sorteios e verifica acertos, demonstrando conhecimento em loops, listas e manipulação de números.
