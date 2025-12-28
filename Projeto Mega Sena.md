@@ -1,4 +1,4 @@
 [sena.py](https://github.com/user-attachments/files/24360929/sena.py)
-🎰 Mega_Sena.
+🎰 Mega_Sena:
 Simulação da Mega Sena:
 🎲 Gera apostas aleatórias, realiza sorteios e verifica acertos, demonstrando conhecimento em loops, listas e manipulação de números.
