@@ -1,0 +1,294 @@
+/* ===========================
+   RESET & BASE
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px Arial, Helvetica, sans-serif;
+    background: #e6e6e6;
+}
+
+/* ===========================
+   LOGO
+=========================== */
+#logo {
+    background: #f7b600;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.class1 {
+    color: gray;
+    font-size: 2.5em;
+    display: inline;
+}
+
+.class2 {
+    color: white;
+    font-size: 2.5em;
+    display: inline;
+}
+
+/* ===========================
+   MENU
+=========================== */
+#menu {
+    background: #f7b600;
+    text-align: center;
+    padding: 0;
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 12px 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+#nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#nav-links a {
+    color: #e6e6e6;
+    text-decoration: none;
+    padding: 12px 14px;
+    display: inline-block;
+    font-size: 0.95em;
+}
+
+#nav-links a:hover {
+    color: #f7b600;
+    background: #e6e6e6;
+}
+
+/* ===========================
+   LAYOUT PRINCIPAL
+=========================== */
+#principal {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 15px 40px;
+}
+
+.conteudo-principal {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* ===========================
+   NOTICIAS (coluna esquerda)
+=========================== */
+.noticias {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+.noticia {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.noticia h2 {
+    color: #f7b600;
+    margin-bottom: 6px;
+}
+
+.img-noticia {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    border-radius: 3px;
+}
+
+.paragrafo {
+    font-size: 0.82em;
+    color: #555;
+}
+
+/* ===========================
+   SIDEBAR (coluna direita)
+=========================== */
+.sidebar {
+    width: 220px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sidebar-bloco {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.sidebar-bloco h4 {
+    background: gray;
+    color: white;
+    padding: 8px 12px;
+    font-size: 0.9em;
+}
+
+.sidebar-conteudo {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sidebar-conteudo hr {
+    margin: 6px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* ===========================
+   LINKS
+=========================== */
+.leiamais {
+    color: #f7b600;
+    text-decoration: none;
+    background: none;
+    display: inline-block;
+    padding: 4px 0;
+}
+
+.leiamais:hover {
+    text-decoration: underline;
+}
+
+.leiamais.small {
+    font-size: 0.82em;
+}
+
+.leiamais.categoria {
+    display: block;
+    font-size: 0.9em;
+    padding: 3px 0;
+}
+
+/* ===========================
+   RODAPÉ
+=========================== */
+.rodape {
+    background: gray;
+    max-width: 960px;
+    margin: 0 auto 30px;
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
+
+.rodape h4 {
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+/* ===========================
+   RESPONSIVO — TABLET
+   (até 768px)
+=========================== */
+@media (max-width: 768px) {
+
+    .class1,
+    .class2 {
+        font-size: 2em;
+    }
+
+    /* Menu hambúrguer */
+    .menu-toggle {
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        background: #f7b600;
+    }
+
+    #nav-links.open {
+        display: flex;
+    }
+
+    #nav-links a {
+        padding: 12px 20px;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        text-align: left;
+    }
+
+    /* Layout empilha: noticias em cima, sidebar embaixo */
+    .conteudo-principal {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar-bloco {
+        flex: 1;
+        min-width: 200px;
+    }
+}
+
+/* ===========================
+   RESPONSIVO — CELULAR
+   (até 480px)
+=========================== */
+@media (max-width: 480px) {
+
+    #logo {
+        height: 70px;
+    }
+
+    .class1,
+    .class2 {
+        font-size: 1.6em;
+    }
+
+    #principal {
+        padding: 12px 10px 30px;
+    }
+
+    .noticia {
+        padding: 14px;
+    }
+
+    .noticia h2 {
+        font-size: 1.1em;
+    }
+
+    .sidebar {
+        flex-direction: column;
+    }
+
+    .rodape {
+        margin: 0 10px 20px;
+        padding: 12px;
+    }
+}
